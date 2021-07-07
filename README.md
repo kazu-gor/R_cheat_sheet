@@ -250,14 +250,50 @@ boxplot(data, range=0)
 dev.copy2pdf()
 ```
 
+## 二項分布 $Bin(n, p)$
 
+### 例
+```
+gbinom<-function(n=10,p=0.5){
+ barplot(dbinom(0:n,n,p),names=0:n)
+}
+```
 
+## ポアソン分布 $P_0(\lambda)$
 
+### 例
+```
+gpois<-function(lambda=2,re=30){
+ barplot(dpois(0:re,lambda),names=0:re)
+}
+```
 
+## 幾何分布 $Geo(p)$
 
+### 例
+```
+ggeom<-function(p=0.5,re=30){
+ barplot(dgeom(0:re,p),names=0:re)
+}
+```
 
+## 超幾何分布 $HG(a, b, n)$
 
+### 例
+```
+ghyper<-function(m=15,n=30,k=10){
+ barplot(dhyper(0:k,m,n,k), names=0:k)
+}
+```
 
+## 負の二項分布
+
+### 例
+```
+gnbinom<-function(r=3,p=0.5,re=30){
+ barplot(dnbinom(0:re,r,p),names=0:re)
+}
+```
 
 
 
